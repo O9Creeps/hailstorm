@@ -1,0 +1,13 @@
+W|H
+where W is width
+where H is height
+X--data--F
+where X is start
+where F is finish
+where --data-- is data_level
+0 - blank
+1 - node type 1
+2 - node type 2
+3 - node type 3
+4 - node type 4
+...
