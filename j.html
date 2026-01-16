@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TestNav Asset Getter</title>
+	</head>
+	<body>
+		<h1>TestNav Asset Getter</h1>
+		<p>Visit this link: <a href="https://md.testnav.com/client/public/stylesheets/tn.css"> tn.css </a> for a bunch of assets.</p>
+		<p>Now do ctrl+f and search "/images"</p>
+		<p>NOTE: remove the / at the start, if there is one.</p>
+		<p>Once the image is gotten, it will append itself to under the "Go!" button below.</p>
+		<label for="uri">URL:</label>
+		<input type="text" id="uri" name="uri"><br><br>
+		<input type="button" value="Go!" id="go" onclick="process()"> <br><br>
+		<div id="imageSpace"></div>
+		<small>Version 1.0.8</small>
+	</body>
+	<script>
+		function process() {
+			const url = ["https://md.testnav.com/", document.getElementById('uri').value];
+			let full = url.join("");
+			const myDiv = document.getElementById('imageSpace');
+    		const myImage = document.createElement('img');
+    		myImage.src = full;
+    		myImage.alt = 'Source';
+   		myDiv.appendChild(myImage);
+		}
+	</script>
+</html>
